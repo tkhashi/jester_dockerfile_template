@@ -22,3 +22,4 @@ $ curl http://localhost:5000/
 >> <h1>Hello jester template!</h1>
 ```
 
+![image](https://user-images.githubusercontent.com/66816003/166151466-2445ea66-f0a7-4de1-b9e4-f2db92a69f02.png)
