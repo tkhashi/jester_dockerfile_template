@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app:
+    container_name: jester_template        # コンテナ名を指定.なんでもよい.
+    build:                            
+      context: .                           # コンテナにマウントするディレクトリを指定.
+      dockerfile: Dockerfile               # Dockerfileのパスを指定.
+    volumes:
+      - ./:/opt/jester_template            # 永続保存するディレクトリと保存したいコンテナ上のパス.
+    working_dir: /opt/jester_template      # コンテナのルートディレクトリを指定.build:context:でしていしたディレクトリがマウントされる.
+    tty: true                              # コンテナを起動させておくためtrue
+    ports:
+      - "5000:5000"                        # ホストの5000番ポートをコンテナの5000番ポートへマウント.
+    entrypoint: ./entrypoint.sh            
